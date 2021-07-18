@@ -10,7 +10,7 @@ package.name = nomadhys
 package.domain = org.nomadhys
 
 # (str) Source code where the main.py live
-source.dir = .
+source.dir = source
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
@@ -97,7 +97,7 @@ android.api = 28
 #android.sdk = 20
 
 # (str) Android NDK version to use
-#android.ndk = 9c
+android.ndk = 19c
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
