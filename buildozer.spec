@@ -36,7 +36,7 @@ version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,sqlite3,pycryptodome,docutils,twisted
+requirements = python3,kivy,sqlite3,pycryptodome,docutils,twisted,attrs
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -97,7 +97,7 @@ android.api = 28
 #android.sdk = 20
 
 # (str) Android NDK version to use
-android.ndk = 19c
+#android.ndk = 9c
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
@@ -186,7 +186,8 @@ android.ndk = 19c
 #android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a (32 bits), arm64-v8a (64 bits), x86
-android.arch = armeabi-v7a
+#android.arch = armeabi-v7a
+android.arch = arm64-v8a
 
 #
 # Python for android (p4a) specific
