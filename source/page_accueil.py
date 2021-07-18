@@ -62,8 +62,8 @@ Builder.load_string("""
 		Label:
 			id: label_bouton
 			text: root.texte
-            font_size: 15
-			height: 20
+            font_size: "15sp"
+			height: 40
 			size_hint: 1, None
 			
 			#canvas.before:
@@ -93,13 +93,13 @@ Builder.load_string("""
                 cols: 2 if root.width > root.height else 1
 				rows: 1 if root.width > root.height else 2
 				spacing: 40
-                size_hint: .8, None
+                size_hint: .9, None
                 height: self.minimum_height if root.width > root.height else 400
 
                 Image:
                     id: logo
                     source: 'images/titre.png'
-                    height: 300 if root.width > root.height else 150
+                    height: 400 if root.width > root.height else 150
                     #padding: 100
                     size_hint_y: None
 

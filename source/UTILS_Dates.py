@@ -11,6 +11,8 @@
 
 import datetime
 import time
+
+from docutils.nodes import basestring
 from kivy.logger import Logger
 
 
@@ -55,7 +57,7 @@ def HeuresEnDecimal(texteHeure="07:00"):
     if type(texteHeure) == datetime.time :
         heures = str(texteHeure.hour)
         minutes = int(texteHeure.minute)
-    if type(texteHeure) in (str, unicode) :
+    if isinstance(texteHeure, str) :
         posTemp = texteHeure.index(":")
         heures = str(texteHeure[0:posTemp])
         minutes = int(texteHeure[posTemp+1:5])

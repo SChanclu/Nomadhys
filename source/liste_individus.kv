@@ -50,7 +50,7 @@
 				cols: 4
 				rows: 1
 				spacing: 10, 10
-				height: 40
+				height: 50
 				size_hint: 1, None
 
 				Image:
@@ -63,7 +63,7 @@
 					multiline: False
 					#focused: True
 					size_hint: 1, 1
-					font_size: 22
+					font_size: "15sp"
 					text: ""
 					on_text_validate: root.Rechercher(self)
 
@@ -71,14 +71,15 @@
 					id: bouton_recherche
 					size_hint: None, 1
 					text: "Rechercher"
-					font_size: 15
+					font_size: "15sp"
+					width: 200
 					on_release: root.Rechercher(self)
 
 				Button:
 					id: bouton_reinit_recherche
 					size_hint: None, 1
 					text: "X"
-					font_size: 15
+					font_size: "15sp"
 					width: 50
 					on_release: root.Reinit(self)
 

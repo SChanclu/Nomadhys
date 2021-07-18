@@ -140,7 +140,7 @@ Builder.load_string("""
 
             Button: 
                 text: 'Valider'
-                font_size: 15
+                font_size: "10sp"
                 on_release: root.Valider()
 
             BoutonChiffre: 
@@ -149,7 +149,7 @@ Builder.load_string("""
                 
             Button: 
                 text: 'Annuler'
-                font_size: 15
+                font_size: "10sp"
                 on_release: root.dismiss()
                 
 """)

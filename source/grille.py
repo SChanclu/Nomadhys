@@ -69,7 +69,7 @@ Builder.load_string("""
                         
 <BoutonMemo>:
     text_size: self.width-15, self.height-2
-    font_size: 15
+    font_size: "15sp"
     markup: True
     halign: 'left'
     valign: 'top'
@@ -82,7 +82,7 @@ Builder.load_string("""
     
     id: bouton_case
     markup: True
-    taille_police: 12
+    taille_police: "10sp"
     color: (0, 0, 0, 1)
     size_hint: 0.3, None
     height: 50
@@ -99,12 +99,12 @@ Builder.load_string("""
         text: ''
         markup: True
         color: (1, 1, 1, 1)
-        font_size: 11
+        font_size: "10sp"
         size_hint: None, None
         halign: 'center'
         valign: 'top'
         text_size: bouton_case.width, self.font_size
-        pos: bouton_case.center_x - self.width/2.0, bouton_case.y - bouton_case.height + self.font_size
+        pos: bouton_case.center_x - self.width/2.0, bouton_case.y - (bouton_case.height/2.0) + self.font_size
     
     Image:
         id: image_etat
@@ -144,7 +144,7 @@ Builder.load_string("""
             Button:
                 id: ctrl_date
                 text: 'Date'
-                font_size: 15
+                font_size: "15sp"
                 markup: True
                 size_hint: (0.2, None)
                 height: 50
@@ -153,7 +153,7 @@ Builder.load_string("""
             Button:
                 id: ctrl_activite
                 text: 'Activite'
-                font_size: 15
+                font_size: "15sp"
                 markup: True
                 size_hint: (0.5, None)
                 height: 50
@@ -162,7 +162,7 @@ Builder.load_string("""
             Button:
                 id: ctrl_etat
                 text: 'Mode de saisie'
-                font_size: 15
+                font_size: "15sp"
                 markup: True
                 size_hint: (0.3, None)
                 height: 50
@@ -308,7 +308,7 @@ Builder.load_string("""
             BoutonAvecImageLarge:
                 id: bouton_enregistrer
                 texte: 'Enregistrer'
-                font_size: 15
+                font_size: "15sp"
                 chemin_image: 'images/enregistrer.png'
                 disabled: len(root.listeModifications) == 0
                 on_release: root.on_bouton_enregistrer()
@@ -316,7 +316,7 @@ Builder.load_string("""
             BoutonAvecImageLarge:
                 id: bouton_annuler
                 texte: 'Annuler'
-                font_size: 15
+                font_size: "15sp"
                 chemin_image: 'images/annuler.png'
                 disabled: len(root.listeModifications) == 0
                 on_release: root.on_bouton_annuler()
@@ -324,7 +324,7 @@ Builder.load_string("""
             BoutonAvecImageLarge:
                 id: bouton_afficher_filtrer
                 texte: 'Filtrer'
-                font_size: 15
+                font_size: "15sp"
                 chemin_image: 'images/filtre.png'
                 disabled: root.IDactivite == None
                 on_release: root.on_bouton_selection_filtres()
@@ -332,7 +332,7 @@ Builder.load_string("""
             BoutonAvecImageLarge:
                 id: bouton_afficher_totaux
                 texte: 'Totaux'
-                font_size: 15
+                font_size: "15sp"
                 chemin_image: 'images/total.png'
                 disabled: root.IDactivite == None
                 on_release: root.on_bouton_afficher_totaux()
@@ -340,7 +340,7 @@ Builder.load_string("""
             BoutonAvecImageLarge:
                 id: bouton_ajouter_individu
                 texte: 'Ajouter'
-                font_size: 15
+                font_size: "15sp"
                 chemin_image: 'images/ajouter_individu.png'
                 disabled: root.IDactivite == None
                 on_release: root.on_bouton_ajouter_inscription()
@@ -895,11 +895,11 @@ class Grille(Screen):
                 return False
                 
         # Dessin des headers
-        hauteur_ligne = 50
+        hauteur_ligne = 80
         self.box_cases = GridLayout(cols=len(self.listeUnites)+2, row_force_default=True, row_default_height=hauteur_ligne, size_hint=(1, 1), spacing=(5, 5))
         self.box_grille.add_widget(self.box_cases)
         
-        ctrl_label = Label(text="", size_hint=(1, None), font_size=15)
+        ctrl_label = Label(text="", size_hint=(1, None), font_size="15sp")
         self.box_cases.add_widget(ctrl_label)
         
         for IDunite in self.listeUnites :
@@ -921,7 +921,7 @@ class Grille(Screen):
             dictCasesLigne = {"entete":None, "unites":{}, "memo":None}
             
             # Case entete de ligne
-            ctrl_entete = LabelEnteteLigne(text="", size_hint=(1, None), font_size=15, height=hauteur_ligne, markup=True, halign="center")
+            ctrl_entete = LabelEnteteLigne(text="", size_hint=(1, None), font_size="18sp", height=hauteur_ligne, markup=True, halign="center")
             self.box_cases.add_widget(ctrl_entete)
             dictCasesLigne["entete"] = ctrl_entete
             
@@ -1435,16 +1435,16 @@ class Grille(Screen):
         popup = Totaux(title="Totaux", donnees=donnees, size_hint=(0.8, 0.8))
         popup.open()  
         
-        
-        
-        
+
 class MyApp(App):
     IDutilisateur = None
+
     def build(self):
         mainView = Grille(app=self)
         mainView.IDactivite = 1
         mainView.MAJ()
         return mainView
+
 
 if __name__ == '__main__':
     MyApp().run()

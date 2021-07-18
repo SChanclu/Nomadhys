@@ -94,7 +94,7 @@ Builder.load_string("""
 					multiline: False
 					#focused: True
 					size_hint: 1, 1
-					font_size: 22
+					font_size: "10sp"
 					text: ""
 					on_text_validate: root.Rechercher(self)
 
@@ -102,14 +102,14 @@ Builder.load_string("""
 					id: bouton_recherche
 					size_hint: None, 1
 					text: "Rechercher"
-					font_size: 15
+					font_size: "10sp"
 					on_release: root.Rechercher(self)
 
 				Button:
 					id: bouton_reinit_recherche
 					size_hint: None, 1
 					text: "X"
-					font_size: 15
+					font_size: "10sp"
 					width: 50
 					on_release: root.Reinit(self)
 

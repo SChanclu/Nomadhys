@@ -42,7 +42,7 @@ Builder.load_string("""
             multiline: False
             focused: True
             size_hint: 1, 1
-            font_size: 22
+            font_size: "15sp"
             text: ""
             on_text_validate: root.Valider(ctrl_texte.text)
 

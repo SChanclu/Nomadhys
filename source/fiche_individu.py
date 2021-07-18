@@ -19,7 +19,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.uix.image import Image
-from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
+from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem, TabbedPanelHeader
 from kivy.uix.rst import RstDocument
 from kivy.uix.button import Button
 from kivy.graphics import Rectangle, Color
@@ -138,7 +138,8 @@ class FicheIndividu(Screen):
             ]
 
         for dictOnglet in liste_onglets :
-            onglet = TabbedPanelItem(id=dictOnglet["code"], text=dictOnglet["titre"])
+            #onglet = TabbedPanelItem(id=dictOnglet["code"], text=dictOnglet["titre"])
+            onglet = TabbedPanelItem(text=dictOnglet["titre"])
             doc = RstDocument(text=self.GetTexteOnglet(dictOnglet["code"]))
             onglet.add_widget(doc)
             ctrl_onglets.add_widget(onglet)
