@@ -16,6 +16,12 @@
 import time
 HEURE_CHARGEMENT = time.time() 
 
+#from kivy.config import Config
+#Config.set('kivy', 'log_enable', 1)
+#Config.set('kivy', 'log_dir', '/home/dude/folder')
+#Config.set('kivy', 'log_level', 'debug')
+#Config.set('kivy', 'log_name', 'my_file.log')
+
 from kivy.app import App
 from kivy.logger import Logger
 from os.path import dirname, join

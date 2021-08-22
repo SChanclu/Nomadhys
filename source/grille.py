@@ -47,7 +47,6 @@ COULEUR_ATTENTE = (1, 1, 0, 1)
 COULEUR_REFUS = (1, 0, 0, 1)
 
 
-
 Builder.load_string("""
 #: import Animation kivy.animation.Animation
 
@@ -62,11 +61,7 @@ Builder.load_string("""
         center_x: root.x + 25
         #x: root.x
 
-    
-  
-                        
-                        
-                        
+
 <BoutonMemo>:
     text_size: self.width-15, self.height-2
     font_size: "15sp"
@@ -74,8 +69,8 @@ Builder.load_string("""
     halign: 'left'
     valign: 'top'
     disabled: not self.opacity
-    
-    
+
+
 <BoutonCase>:
     label_groupe: label_groupe
     image_etat: image_etat
@@ -114,11 +109,7 @@ Builder.load_string("""
         pos: bouton_case.x + bouton_case.width - 20, bouton_case.y + bouton_case.height - 20
         
 
-
-
-
-
-        
+  
 <Grille>:
     name: 'consommations'
     box_base: box_base

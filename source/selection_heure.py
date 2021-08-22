@@ -28,7 +28,7 @@ Builder.load_string("""
 
 <CaseAffichage>
     text: ''
-    font_size: 40
+    font_size: "15sp"
     background_normal: ''
     background_color: 1, 1, 1, 0
     
@@ -50,7 +50,7 @@ Builder.load_string("""
 <BoutonChiffre>
     text: str(root.chiffre)
     size_hint: 1, 1
-    font_size: 25
+    font_size: "14sp"
     
     
 <SelectionHeure>:
@@ -59,7 +59,7 @@ Builder.load_string("""
     label_2: label_2
     label_3: label_3
     size_hint: None, None
-    size: 350, 500
+    size: 450, 600
     
     BoxLayout:
         orientation: 'vertical'
@@ -86,7 +86,7 @@ Builder.load_string("""
                 text: ':'
                 size_hint: None, 1
                 width: 20
-                font_size: 40
+                font_size: "15sp"
                 
             CaseAffichage:
                 id: label_2
@@ -140,7 +140,7 @@ Builder.load_string("""
 
             Button: 
                 text: 'Valider'
-                font_size: "10sp"
+                font_size: "15sp"
                 on_release: root.Valider()
 
             BoutonChiffre: 
@@ -149,7 +149,7 @@ Builder.load_string("""
                 
             Button: 
                 text: 'Annuler'
-                font_size: "10sp"
+                font_size: "15sp"
                 on_release: root.dismiss()
                 
 """)

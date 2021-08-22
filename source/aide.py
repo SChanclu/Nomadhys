@@ -137,8 +137,8 @@ Builder.load_string("""
         TabbedPanel: 
             id: tab_aide
             do_default_tab: False
-            tab_width: 150
-            font_size: 15
+            tab_width: 280
+            font_size: "12sp"
             padding: 10
                                 
         GridLayout:
@@ -162,7 +162,7 @@ Builder.load_string("""
                 id: ctrl_etat
                 text: ''
                 markup: True
-                font_size: 14
+                font_size: "12sp"
                 size_hint: 1, None
                 v_align: 'middle'
                 text_size: (self.size[0], None)
@@ -187,7 +187,7 @@ class Aide(Screen):
             #onglet.add_widget(doc)
             
             onglet = TabbedPanelHeader(text=titre)
-            onglet.font_size = 15
+            onglet.font_size = "15sp"
             onglet.content = RstDocument(text=texte)
       
             

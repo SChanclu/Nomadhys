@@ -10,7 +10,7 @@ package.name = nomadhys
 package.domain = org.nomadhys
 
 # (str) Source code where the main.py live
-source.dir = source
+source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
@@ -36,7 +36,7 @@ version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = hostpython3==3.8.11,python3==3.8.11,kivy==2.0.0,sqlite3,pycryptodome,docutils,twisted,Pillow,attrs
+requirements = python3,kivy,sqlite3,pycryptodome,docutils,twisted
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -186,8 +186,7 @@ android.api = 28
 #android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a (32 bits), arm64-v8a (64 bits), x86
-#android.arch = armeabi-v7a
-android.arch = arm64-v8a
+android.arch = armeabi-v7a
 
 #
 # Python for android (p4a) specific
